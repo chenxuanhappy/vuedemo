@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>vuedemo</title>
+    <style type="text/css">
+    body {
+      background: #000;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ball {
+      height: 80px;
+      width: 80px;
+      animation: rotate 3s infinite linear alternate-reverse both;
+    }
+    .circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        transform: translate(0, 0);
+        opacity: 0.8;
+        mix-blend-mode: screen;
+        animation: move 3s infinite linear alternate-reverse both;
+      }
+    @keyframes move {
+      100% {
+        transform: translate(0, 0);
+      }
+    }  
+    @keyframes rotate {
+      100% {
+        transform: rotate(180deg) scale(0.8, 0.8);
+      }
+    }
+    .circle:nth-child(1) {
+      transform: translate(-20px, -35px); 
+    }    
+    .circle:nth-child(2) {
+      transform: translate(40px, 0); 
+    }
+    .circle:nth-child(3) {
+      transform: translate(-20px, 35px); 
+    } 
+    .circle:nth-child(4) {
+      transform: translate(20px, -35px); 
+    } 
+    .circle:nth-child(5) {
+      transform: translate(-40px, 0); 
+    } 
+    .circle:nth-child(6) {
+      transform: translate(20px, 35px); 
+    }
+    .circle:nth-child(odd) {
+      background: #61bea2;
+    } 
+    .circle:nth-child(even) {
+      background: #529ca0;
+    } 
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <div class="ball">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  <script type="text/javascript" src="/app.js"></script></body>
+</html>
